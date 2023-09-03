@@ -1,5 +1,5 @@
 import React from "react";
-import Button from 'react-bootstrap/Button';
+import {Button,Carousel} from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
@@ -10,6 +10,10 @@ import move from './images/moving-van.jpg'
 import briefcase from './images/briefcase.svg'
 import bus from './images/bus-front.svg'
 import heart from './images/chat-square-heart.svg'
+import arrowRight from './images/chevron-right.svg'
+import couple from './images/couple.jpg'
+import family from './images/family.jpg'
+import dog from './images/dog.jpg'
 const featureIcon={
     width: '4rem',
     height: '4rem',
@@ -78,8 +82,8 @@ const Rbst02 =()=>{
             </div>
             <div  class="container px-4 py-5" id="featured-3">
                 <h2  className="pb-2 border-bottom ">Why Move With Us?</h2>
-                <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-                    <div style={divStyle} class="feature col">
+                <div style={divStyle} class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                    <div  class="feature col">
                         <div style={featureIcon} class="d-inline-flex align-items-center justify-content-center
                          text-bg-primary bg-gradient fs-2 mb-3">
                             <img src={briefcase} style={{height:'30px'}} alt="logo image"/>
@@ -93,7 +97,7 @@ const Rbst02 =()=>{
                         </p>
                         <a href="#" class="icon-link">
                         Get a quote
-                            <svg class="bi"></svg>
+                        <img src={arrowRight} style={{height:'20px'}} alt="logo image"/>
                         </a>
                     </div>
                     <div class="feature col">
@@ -106,7 +110,7 @@ const Rbst02 =()=>{
                         </p>
                         <a href="#" class="icon-link">
                         Get a quote
-                            <svg class="bi"></svg>
+                            <img src={arrowRight} style={{height:'20px'}} alt="logo image"/>
                         </a>
                     </div>
                     <div class="feature col">
@@ -118,11 +122,24 @@ const Rbst02 =()=>{
                             </p>
                         <a href="#" class="icon-link">
                         Get a quote
-                            <svg class="bi"></svg>
+                            <img src={arrowRight} style={{height:'20px'}} alt="logo image"/>
                         </a>
                     </div>
                 </div>
             </div>
+            <Container>
+                <Carousel>
+                    <Carousel.Item>
+                        <img src={couple} style={{ maxHeight: '600px', width:'100%'  }}  alt="couple image"/>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img src={dog}  style={{ maxHeight: '600px', width:'100%'  }}alt="dog image"/>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img src={family} style={{ maxHeight: '600px', width:'100%' }} alt="family image"/>
+                    </Carousel.Item>
+                </Carousel>
+            </Container>
         </div>
     )
 }
